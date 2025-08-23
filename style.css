@@ -1,0 +1,80 @@
+/* Reset & Body */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+body { display: grid; justify-content: center; align-items: center; background-color: #ffe6e9; font-family: "Quicksand", "Poppins", sans-serif; }
+
+/* Containers */
+.container { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: 0.2s; }
+.question-container { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); transition: 0.2s; text-align: center; }
+.local-gif { width: 100%; max-width: 300px; border-radius: 10px; display: block; margin: 0 auto 2rem auto; pointer-events: none; }
+.question { 
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  line-height: 1.6; 
+  text-align: center; 
+  background: linear-gradient(135deg, #ff6b81, #a18cd1); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+.button-container { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; }
+
+/* Buttons */
+.btn { 
+  border: none; 
+  border-radius: 50px; 
+  padding: 12px 28px; 
+  font-family: "Quicksand", "Poppins", sans-serif; 
+  font-size: 18px; 
+  cursor: pointer; 
+  transition: all 0.3s ease; 
+  color: white; 
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+/* ปุ่ม Yes */
+.yes-btn { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+.yes-btn:hover { background: linear-gradient(135deg, #ff92a7, #ffb3c6); transform: scale(1.08); }
+
+/* ปุ่ม No */
+.no-btn { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+.no-btn:hover { background: linear-gradient(135deg, #c5b3e8, #fdd6f3); transform: scale(1.08); }
+
+/* Result */
+.result-container { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: 0.2s; text-align: center; }
+.gif-result { border-radius: 10px; margin-bottom: 2rem; max-width: 300px; }
+.result-container h2 { font-size: 2.5rem; text-align: center; color: #ff4d6d; }
+
+/* Responsive font sizes */
+@media (max-width: 480px) { 
+  .question { font-size: 1.8rem; }
+  .result-container h2 { font-size: 1.5rem; }
+  .btn { font-size: 14px; padding: 10px 20px; }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) { 
+  .question { font-size: 2.2rem; }
+  .result-container h2 { font-size: 2rem; }
+  .btn { font-size: 16px; }
+}
+
+@media (min-width: 1025px) { 
+  .question { font-size: 2.5rem; }
+  .result-container h2 { font-size: 2.5rem; }
+  .btn { font-size: 18px; }
+}
+
+/* Heart loader */
+.cssload-main { display: none; position: absolute; content: ""; top: 17%; left: 50%; margin: 200px auto 0 auto; transform: translate(-50%, -50%); }
+.cssload-main * { font-size: 62px; }
+.cssload-heart { animation: cssload-heart 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite normal; position: absolute; top: 50%; left: 50%; }
+.cssload-heartL { width: 1em; height: 1em; background-color: #ff0000; position: absolute; border-radius: 100%; animation: cssload-heartL 2.88s cubic-bezier(0.75,0,0.5,1) infinite normal; transform: translate(-28px, -27px); }
+.cssload-heartR { width: 1em; height: 1em; background-color: #ff0000; position: absolute; border-radius: 100%; transform: translate(28px, -27px); animation: cssload-heartR 2.88s cubic-bezier(0.75,0,0.5,1) infinite normal; }
+.cssload-square { width: 1em; height: 1em; background-color: #ff0000; position: relative; display: block; transform: scale(1) rotate(-45deg); animation: cssload-square 2.88s cubic-bezier(0.75,0,0.5,1) infinite normal; }
+.cssload-shadow { top: 97px; left: 50%; position: relative; display: block; bottom: -0.5em; width: 1em; height: 0.24em; background-color: rgb(215,215,215); border-radius: 50%; animation: cssload-shadow 2.88s cubic-bezier(0.75,0,0.5,1) infinite normal; }
+
+/* Keyframes */
+@keyframes cssload-square { 50% { border-radius: 100%; transform: scale(0.5) rotate(-45deg); } 100% { transform: scale(1) rotate(-45deg); } }
+@keyframes cssload-heart { 50% { transform: rotate(360deg); } 100% { transform: rotate(720deg); } }
+@keyframes cssload-heartL { 60% { transform: scale(0.4); } }
+@keyframes cssload-heartR { 40% { transform: scale(0.4); } }
+@keyframes cssload-shadow { 50% { transform: scale(0.5); background-color: rgb(228,228,228); } }
