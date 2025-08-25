@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Do you love me?</title>
+  </head>
+  <body>
+
+    <!-- เพลงตอนเข้าเว็บ (เริ่ม muted ไว้ก่อน) -->
+    <audio id="music-intro" src="ไม่เป็นรอง.mp3" autoplay loop muted hidden></audio>
+
+    <!-- เพลงหลังจากกด Yes -->
+    <audio id="music-yes" src="ดาวหางฮัลเลย์.mp3" loop muted hidden></audio>
+
+    <div class="question-container container">
+      <video class="local-gif" src="Reply me love.mp4" autoplay muted loop></video>
+      <h2 class="question">กลับมาให้เค้าดูแลเหมือนเดิมนะ</h2>
+      <div class="button-container">
+        <button class="yes-btn btn js-yes-btn">Yes</button>
+        <button class="no-btn btn js-no-btn">No</button>
+      </div>
+    </div>
+
+    <div class="result-container container">
+      <video class="gif-result" src="Love me.mp4" autoplay loop muted></video>
+      <h2>สัญญาว่าครั้งนี้จะดูแลให้ดีกว่าเดิม😍!</h2>
+    </div>
+
+    <div class="cssload-main">
+      <div class="cssload-heart">
+        <span class="cssload-heartL"></span>
+        <span class="cssload-heartR"></span>
+        <span class="cssload-square"></span>
+      </div>
+      <div class="cssload-shadow"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
